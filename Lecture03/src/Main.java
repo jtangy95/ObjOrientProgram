@@ -1,4 +1,4 @@
-public class Lecture3 {
+public class Main {
 
     public static void main(String[] args){
         // array declaration
@@ -10,10 +10,10 @@ public class Lecture3 {
         int maxAge = Integer.MIN_VALUE ; // -2^{31} = -2147483648
         for (int age : studentAges) {
             if (age > maxAge) {
-                maxAge = age ; 
+                maxAge = age ;
             }
         }
-        System.out.println("The max age is " + maxAge) ;
+        System.out.println("The maximum age is " + maxAge) ;
 
 
         // Nested loop example
@@ -29,20 +29,20 @@ public class Lecture3 {
         // How to print "c.o.m.p.u.t.e.r" ? There is no "." at the end.
         char[] chars = {'c', 'o', 'm', 'p', 'u', 't', 'e', 'r'} ;
         for (int i =0; i < chars.length - 1 ; i++){
-            System.out.print(chars[i]+".") ;
+            System.out.print(chars[i] + ".") ;
         }
         System.out.println(chars[chars.length -1]) ;
-        
+
         System.out.println(mulPlus(5,3,2)) ;
-        
-        
+
+
     }
-    
+
     // Declaration order of functions does not matter in Java (It does matter in C programming.)
     public static int mulPlus(int i , int j , int k){
         return plus(i, j) * k ;
     }
-    
+
     public static int plus(int i , int j ){
         return i+j ;
     }

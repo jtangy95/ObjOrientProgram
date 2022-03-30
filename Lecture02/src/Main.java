@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Lecture2 {
+public class Main {
 
     public static void main(String[] args){
         // + operator runs from the left to the right
