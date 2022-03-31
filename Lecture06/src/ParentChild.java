@@ -1,16 +1,30 @@
 class Parent {
     int var = 10 ;
+    Parent(){
+        System.out.println("Parent Class Constructor is called");
+    }
+    Parent(int var){
+        this.var = var ;
+        System.out.println("Parent Class Constructor is called");
+    }
     void printName() {
-        System.out.println("Parent");
+        System.out.println("Parent Name");
     }
     String str() {
-        return "Parent" ;
+        return "Parent String" ;
     }
 }
 
 class Child extends Parent {
     // hiding variable
     int var = 100 ;
+    Child(){
+        System.out.println("Child Class Constructor is called");
+    }
+    Child(int var){
+        this.var = var ;
+        System.out.println("Child Class Constructor is called");
+    }
     int getParentVar() {
         // use `super` to access parent class instance variable (even hidden one)
         return super.var ;
@@ -24,14 +38,14 @@ class Child extends Parent {
     }
     @Override
     void printName() {
-        System.out.println("Child");
+        System.out.println("Child Name");
     }
     void printParentName() {
         super.printName();
     }
 
     String str() {
-        return "Child";
+        return "Child String";
     }
     void accessTest(){
         System.out.println("str() --> " + str());
